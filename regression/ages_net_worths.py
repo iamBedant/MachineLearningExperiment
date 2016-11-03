@@ -3,13 +3,14 @@ import random
 
 def ageNetWorthData():
 
-    random.seed(42)
-    numpy.random.seed(42)
+    # random.seed(42)
+    # numpy.random.seed(42)
 
     ages = []
-    for ii in range(100):
+    for i in range(100):
         ages.append( random.randint(20,65) )
-    net_worths = [ii * 6.25 + numpy.random.normal(scale=40.) for ii in ages]
+        
+    net_worths = [i * 6.25 + numpy.random.normal(scale=40.) for i in ages]
 
     ### need massage list into a 2d numpy array to get it to work in LinearRegression
     
